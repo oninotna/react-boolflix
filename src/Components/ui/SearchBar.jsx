@@ -12,9 +12,9 @@ export default function SearchBar() {
   };
 
   return (
-    <form className="d-flex py-3 px-5 gap-3" onSubmit={handleSubmit}>
+    <form className="d-flex py-3 px-5 my-2 gap-3 justify-content-end" onSubmit={handleSubmit}>
       <input
-        className="form-control px-5"
+        className="form-control input-search"
         type="text"
         onChange={(e) => {
           const title = e.target.value;

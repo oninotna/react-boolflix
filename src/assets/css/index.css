@@ -1,0 +1,15 @@
+.input-search {
+    width: 200px;
+}
+
+.media-container {
+    max-height: 600px;
+    border: 2px solid lightgray;
+    border-radius: 15px;
+    padding: 20px;
+    overflow: auto;
+}
+
+.media-container::-webkit-scrollbar {
+    display: none;
+}

@@ -2,13 +2,15 @@ import { useMovie } from "../Contexts/MovieContext";
 import MediaList from "./MediaList";
 
 export default function Main () {
-    const {moviePopularData, movieData} = useMovie();
+    const {moviePopularData, movieData, seriesPopularData, seriesData} = useMovie();
 
     const movieListToDisplay = movieData.length ? movieData : moviePopularData;
+    const seriesToDisplay = seriesData.length ? seriesData : seriesPopularData;
 
     return (
-        <div className="container">
-            <MediaList media={movieListToDisplay} title={"Movies"}/>
-        </div>
-    )
+      <>
+        <MediaList media={movieListToDisplay} title={"Movies"} />
+        <MediaList media={seriesToDisplay} title={"Series"} />
+      </>
+    );
 }
