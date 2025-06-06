@@ -13,3 +13,8 @@
 .media-container::-webkit-scrollbar {
     display: none;
 }
+
+.flag {
+    width: 65px;
+    height: 55px;
+}
