@@ -1,11 +1,15 @@
 import { flags } from "../../assets/data/flag";
 
-export default function CardMovie ({ media }) {
+const imgPath = import.meta.env.VITE_IMAGE_URL;
+
+export default function Card ({ media }) {
 
     return (
-        <div className="card" style={{width: "18rem"}}>
-          {/* <img src="..." class="card-img-top" alt="..." /> */}
-          <div className="card-body">
+        <div className="card media-card">
+          <img className="media-image"
+          src={`${imgPath}${media.poster_path}`} 
+          alt={media.title || media.name} />
+          <div className="card-body media-info">
             <h4 className="card-title">{media.title || media.name}</h4>
             <h5 className="card-title">{media.original_title || media.original_name}</h5>
             <p className="card-text">{media.vote_average}</p>

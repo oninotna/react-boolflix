@@ -18,3 +18,27 @@
     width: 65px;
     height: 55px;
 }
+
+.media-card {
+    width: 250px;
+    height: 350px;
+    padding: 0;
+    margin: 5px;
+}
+
+.media-card:hover .media-image {
+    display: none;
+}
+
+.media-card:hover .media-info {
+    display: block;
+}
+
+.media-image {
+    height: 100%;
+    object-fit: contain;
+}
+
+.media-info {
+    display: none;
+}
